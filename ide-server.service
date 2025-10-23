@@ -4,11 +4,11 @@ After=network.target
 
 [Service]
 Type=simple
-User=droidmaster
-WorkingDirectory=/home/droidmaster/ide-server
+User="your user"
+WorkingDirectory=/home/"your user"/ide-server
 Environment="DATABASE_URL=sqlite://ide_server.db"
 Environment="RUST_LOG=info"
-ExecStart=/home/droidmaster/ide-server/target/release/ide-server
+ExecStart=/home/"your user"/ide-server/target/release/ide-server
 Restart=always
 RestartSec=5
 
